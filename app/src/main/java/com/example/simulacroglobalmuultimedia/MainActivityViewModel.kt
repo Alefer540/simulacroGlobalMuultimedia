@@ -91,7 +91,7 @@ class MainActivityViewModel: ViewModel() {
     }
     fun obtenerMasculino(){
         CoroutineScope(Dispatchers.Main).launch {
-            val usuariosResponse= UsuariosResponse(usuariosResponse.results.filter { it.gender == "male" })
+            val usuariosResponse= UsuariosResponse(usuariosResponse.results.filter { it.gender == "male"})
             setResponseUsuarioInMainThread(usuariosResponse)
         }
 
